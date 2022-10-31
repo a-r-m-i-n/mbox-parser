@@ -24,7 +24,7 @@ class ParserTest extends TestCase
         ];
 
         /** @var MailMessage $message */
-        foreach ($subject->getAllMessages() as $index => $message) {
+        foreach (array_values($subject->getAllMessages()) as $index => $message) {
             self::assertSame($values[$index]['to'], $message->getTo()[0]->getEmail());
 
             self::assertSame('no-reply@example.com', $message->getFrom());
@@ -52,7 +52,7 @@ class ParserTest extends TestCase
 
         // Second mail got attachments, first and third mail are identically
         /** @var MailMessage $secondMail */
-        $secondMail = $subject->getAllMessages()[1];
+        $secondMail = array_values($subject->getAllMessages())[1];
 
         self::assertSame('recipient@domain.com', $secondMail->getTo()[0]->getEmail());
         self::assertSame('Robert Recipient', $secondMail->getTo()[0]->getName());
@@ -74,7 +74,7 @@ SVG
         self::assertStringStartsWith('# EXT:mbox (Mail Client)', $attachments[1]->getContent());
 
         // Testing first and third mail
-        $firstMail = $subject->getAllMessages()[0];
+        $firstMail = array_values($subject->getAllMessages())[0];
         self::assertCount(2, $firstMail->getTo());
         self::assertSame('recipient1@domain.com', (string)$firstMail->getTo()[0]);
         self::assertSame('recipient2@domain.com', (string)$firstMail->getTo()[1]);
@@ -84,7 +84,7 @@ SVG
         self::assertSame('This is the text body of the mail', $firstMail->getText());
         self::assertSame('This is the <strong>HTML body</strong> of the mail', trim($firstMail->getHtml()));
 
-        $thirdMail = $subject->getAllMessages()[2];
+        $thirdMail = array_values($subject->getAllMessages())[2];
         self::assertCount(3, $thirdMail->getTo());
         self::assertSame('Robert Recipient <recipient@domain.com>', (string)$thirdMail->getTo()[0]);
         self::assertSame('recipient1@domain.com', (string)$thirdMail->getTo()[1]);
