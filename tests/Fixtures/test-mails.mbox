@@ -1,0 +1,96 @@
+From: sender@domain.com
+To: recipient1@domain.com, recipient2@domain.com
+Cc: cc@domain.com
+Reply-To: replyTo@domain.com
+Subject: Test Mail #1
+X-Mailer: TYPO3
+Message-ID: <45ee9d32d3174ea2bb4fb66e3b95e3c3@domain.com>
+MIME-Version: 1.0
+Date: Mon, 31 Oct 2022 11:20:58 +0000
+Content-Type: multipart/alternative; boundary=-uF1HYF7
+
+---uF1HYF7
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+This is the text body of the mail
+---uF1HYF7
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+This is the <strong>HTML body</strong> of the mail
+---uF1HYF7--
+X-Priority: 1 (Highest)
+From: sender@domain.com
+To: Robert Recipient <recipient@domain.com>
+Subject: Test Mail #2
+X-Mailer: TYPO3
+Message-ID: <6b289e5f29fc2fe4c8298c53db3f5526@domain.com>
+MIME-Version: 1.0
+Date: Mon, 31 Oct 2022 11:20:58 +0000
+Content-Type: multipart/mixed; boundary=8-dgLuxH
+
+--8-dgLuxH
+Content-Type: multipart/alternative; boundary=CXxQR9iK
+
+--CXxQR9iK
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+This is the text body of the mail, which also contains an attachment
+--CXxQR9iK
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+This is the <strong>HTML body</strong> of the mail, whcih also contains an =
+attachment
+--CXxQR9iK--
+
+--8-dgLuxH
+Content-Type: text/svg; name=Extension.svg
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; name=Extension.svg; filename=Extension.svg
+
+PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8x
+OTk5L3hsaW5rIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5l
+YXJHcmFkaWVudCBpZD0iYSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNEY1QjgxIi8+
+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjM0E0ODYxIi8+PC9saW5lYXJHcmFkaWVudD48
+bGluZWFyR3JhZGllbnQgeGxpbms6aHJlZj0iI2EiIGlkPSJiIiB4MT0iNi45NDMiIHkxPSIxMC42
+NDYiIHgyPSI3LjA3MiIgeTI9IjMxLjA1NyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2Ui
+Lz48L2RlZnM+PHBhdGggZD0iTTAgMGgzMnYzMkgweiIgZmlsbD0idXJsKCNiKSIvPjxnIGZpbGwt
+cnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuNSIgZD0iTTEw
+LjMzIDBoMTJ2MzJoLTEyeiIvPjxwYXRoIGZpbGw9IiNCMURFRjciIGQ9Ik0xMC4zMyAyMGgxMnYx
+MmgtMTJ6Ii8+PHBhdGggZD0ibTE2LjMzOSAyNy40MzMtMi42NjQtMi43OGg1LjMyOHoiIGZpbGw9
+IiMxNzQxNkUiLz48L2c+PC9zdmc+Cg==
+--8-dgLuxH
+Content-Type: text/markdown; name=README.md
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; name=README.md; filename=README.md
+
+IyBFWFQ6bWJveCAoTWFpbCBDbGllbnQpCgpUWVBPMyBDTVMgYmFja2VuZCBtb2R1bGUgdG8gdmll
+dyBtYm94IGZpbGUgY29udGVudHMsIGxpa2UgYW4gZW1haWwgY2xpZW50LgoKCgojIyBUT0RPCgot
+IFsgXSBEZXBlbmRlbmNpZXMgZsO8ciBURVItUmVsZWFzZSBlaW5iaW5kZW4K
+--8-dgLuxH--
+From: sender@domain.com
+To: Robert Recipient <recipient@domain.com>, recipient1@domain.com,
+ recipient2@domain.com
+Cc: cc@domain.com
+Reply-To: replyTo@domain.com
+Subject: Test Mail #3
+X-Mailer: TYPO3
+Message-ID: <90281d512495b9fa1c56e43a28ebcc8e@domain.com>
+MIME-Version: 1.0
+Date: Mon, 31 Oct 2022 11:20:58 +0000
+Content-Type: multipart/alternative; boundary=3UbIBDCk
+
+--3UbIBDCk
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+This is the text body of the mail
+--3UbIBDCk
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+This is the <strong>HTML body</strong> of the mail
+--3UbIBDCk--

@@ -1,0 +1,5 @@
+/.idea
+/vendor
+/.build/.cache
+/.build/reports
+/.build/*.cache

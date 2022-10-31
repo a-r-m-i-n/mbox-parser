@@ -1,0 +1,59 @@
+{
+    "name": "armin/mbox-parser",
+    "description": "PHP library to parse mbox files to email messages.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Armin Vieweg",
+            "email": "armin@v.ieweg.de",
+            "homepage": "https://v.ieweg.de"
+        }
+    ],
+    "keywords": [
+        "mbox",
+        "email",
+        "mail",
+        "parser"
+    ],
+    "require": {
+        "php": ">=7.3",
+        "zbateson/mail-mime-parser": "^2.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.8",
+        "jangregor/phpstan-prophecy": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.4",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Armin\\MboxParser\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Armin\\MboxParser\\Tests\\": "tests"
+        }
+    },
+    "config":{
+        "platform": {
+            "php": "7.3.14"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@composer dump -o",
+            "@test-php"
+        ],
+        "test-with-coverage": [
+            "@composer dump -o",
+            "@test-php-coverage"
+        ],
+        "php-stan": "phpstan analyse -c .build/phpstan.neon",
+        "php-cs": "php-cs-fixer fix --config .build/php-cs-rules.php --verbose --diff --dry-run",
+        "php-fix": "php-cs-fixer fix --config .build/php-cs-rules.php",
+        "test-php": "phpunit -c .build/phpunit.xml --no-coverage",
+        "test-php-coverage": "export XDEBUG_MODE=coverage && phpunit -c .build/phpunit.xml --coverage-text"
+    }
+}
