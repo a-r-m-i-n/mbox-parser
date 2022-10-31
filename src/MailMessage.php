@@ -182,6 +182,11 @@ class MailMessage
         return $attachments;
     }
 
+    public function getSize(): int
+    {
+        return strlen(implode('', $this->messageLines));
+    }
+
     /**
      * @internal For debugging only
      */
