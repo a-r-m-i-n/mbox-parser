@@ -63,12 +63,9 @@ class MailMessage
         return $this->getMessage()->getHeaderValue(HeaderConsts::MESSAGE_ID) ?? '';
     }
 
-    /**
-     * @return array|MailAddress[]
-     */
-    public function getTo(): array
+    public function getTo(): MailAddressCollection
     {
-        $addresses = [];
+        $addresses = new MailAddressCollection();
 
         $to = $this->getMessage()->getHeader(HeaderConsts::TO);
         if (!$to) {
@@ -77,7 +74,41 @@ class MailMessage
 
         /** @var AddressPart $part */
         foreach ($to->getParts() as $part) {
-            $addresses[] = new MailAddress($part->getEmail(), $part->getName());
+            $addresses->add(new MailAddress($part->getEmail(), $part->getName()));
+        }
+
+        return $addresses;
+    }
+
+    public function getCc(): MailAddressCollection
+    {
+        $addresses = new MailAddressCollection();
+
+        $cc = $this->getMessage()->getHeader(HeaderConsts::CC);
+        if (!$cc) {
+            return $addresses;
+        }
+
+        /** @var AddressPart $part */
+        foreach ($cc->getParts() as $part) {
+            $addresses->add(new MailAddress($part->getEmail(), $part->getName(), MailAddress::TYPE_CC));
+        }
+
+        return $addresses;
+    }
+
+    public function getBcc(): MailAddressCollection
+    {
+        $addresses = new MailAddressCollection();
+
+        $bcc = $this->getMessage()->getHeader(HeaderConsts::BCC);
+        if (!$bcc) {
+            return $addresses;
+        }
+
+        /** @var AddressPart $part */
+        foreach ($bcc->getParts() as $part) {
+            $addresses->add(new MailAddress($part->getEmail(), $part->getName(), MailAddress::TYPE_BCC));
         }
 
         return $addresses;
@@ -100,12 +131,9 @@ class MailMessage
         return $addressPart->getName();
     }
 
-    /**
-     * @return array|MailAddress[]
-     */
-    public function getReplyTo(): array
+    public function getReplyTo(): MailAddressCollection
     {
-        $addresses = [];
+        $addresses = new MailAddressCollection();
         $replyTo = $this->getMessage()->getHeader(HeaderConsts::REPLY_TO);
         if (!$replyTo) {
             return $addresses;
@@ -113,7 +141,7 @@ class MailMessage
 
         /** @var AddressPart $part */
         foreach ($replyTo->getParts() as $part) {
-            $addresses[] = new MailAddress($part->getEmail(), $part->getName());
+            $addresses->add(new MailAddress($part->getEmail(), $part->getName()));
         }
 
         return $addresses;
