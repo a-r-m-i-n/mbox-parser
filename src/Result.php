@@ -51,7 +51,7 @@ class Result
      */
     public function addMessage(MailMessage $message): void
     {
-        $this->messages[] = $message;
+        $this->messages[$message->getMessageId()] = $message;
     }
 
     /**
@@ -60,5 +60,10 @@ class Result
     public function getAllMessages(): array
     {
         return $this->messages;
+    }
+
+    public function getMessageById(string $messageId): ?MailMessage
+    {
+        return $this->messages[$messageId] ?? null;
     }
 }
