@@ -187,11 +187,8 @@ class MailMessage
         return strlen(implode('', $this->messageLines));
     }
 
-    /**
-     * @internal For debugging only
-     */
-    public function getMessageLines(): array
+    public function getMessageSource(): string
     {
-        return $this->messageLines;
+        return implode('', $this->messageLines);
     }
 }
