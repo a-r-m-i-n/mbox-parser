@@ -17,6 +17,21 @@ class ParserTest extends TestCase
         $parser->parse($invalidFilePath);
     }
 
+    public function testParserWithEmptyMboxFile(): void
+    {
+        $parser = new Parser();
+        $subject = $parser->parse($filePath = __DIR__ . '/../Fixtures/empty.mbox');
+
+        self::assertInstanceOf(Mailbox::class, $subject);
+        self::assertIsIterable($subject);
+        self::assertCount(0, $subject);
+
+        self::assertSame($filePath, $subject->getFilePath());
+        self::assertInstanceOf(DateTime::class, $subject->getDate());
+        self::assertEquals((new DateTime())->setTime(0, 0), $subject->getDate()->setTime(0, 0));
+        self::assertSame(md5_file($filePath), $subject->getMd5Hash());
+    }
+
     public function testParserWithTypo3TestMails(): void
     {
         // This mbox file contains three mails, send by TYPO3's mail test tool (located in install tool)

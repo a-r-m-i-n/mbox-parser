@@ -56,7 +56,9 @@ final class Parser
                     $isMessage = false;
                 }
             }
-            $result->add(new MailMessage($lines));
+            if (!empty($lines)) {
+                $result->add(new MailMessage($lines));
+            }
             fclose($handle);
         }
 
