@@ -2,7 +2,12 @@
 
 namespace Armin\MboxParser;
 
-class Result
+use Doctrine\Common\Collections\ArrayCollection;
+
+/**
+ * @extends ArrayCollection<int, MailMessage>
+ */
+final class Mailbox extends ArrayCollection
 {
     /**
      * @var string
@@ -19,13 +24,10 @@ class Result
      */
     private $date;
 
-    /**
-     * @var array
-     */
-    private $messages = [];
-
-    public function __construct(string $filePath)
+    public function __construct(string $filePath, array $elements = [])
     {
+        parent::__construct($elements);
+
         $this->filePath = $filePath;
         $this->md5Hash = md5_file($filePath) ?: '';
         $this->date = new \DateTime();
@@ -46,24 +48,15 @@ class Result
         return $this->md5Hash;
     }
 
-    /**
-     * @internal Used by parser only
-     */
-    public function addMessage(MailMessage $message): void
-    {
-        $this->messages[$message->getMessageId()] = $message;
-    }
-
-    /**
-     * @return array|MailMessage[]
-     */
-    public function getAllMessages(): array
-    {
-        return $this->messages;
-    }
-
     public function getMessageById(string $messageId): ?MailMessage
     {
-        return $this->messages[$messageId] ?? null;
+        return $this->filter(function (MailMessage $message) use ($messageId) {
+            return $message->getMessageId() === $messageId;
+        })->first() ?: null;
+    }
+
+    protected function createFrom(array $elements)
+    {
+        return new static($this->filePath, $elements);
     }
 }

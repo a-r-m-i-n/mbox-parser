@@ -41,11 +41,8 @@ class MailMessage
         }
         $this->initialized = true;
 
+        /** @var resource $stream */
         $stream = fopen('php://memory', 'r+');
-        if (!$stream) {
-            throw new \RuntimeException('Unable to create file stream in php://memory');
-        }
-
         fwrite($stream, implode('', $this->messageLines));
         rewind($stream);
         $this->message = $this->messageParser->parse($stream, false);
@@ -92,23 +89,6 @@ class MailMessage
         /** @var AddressPart $part */
         foreach ($cc->getParts() as $part) {
             $addresses->add(new MailAddress($part->getEmail(), $part->getName(), MailAddress::TYPE_CC));
-        }
-
-        return $addresses;
-    }
-
-    public function getBcc(): MailAddressCollection
-    {
-        $addresses = new MailAddressCollection();
-
-        $bcc = $this->getMessage()->getHeader(HeaderConsts::BCC);
-        if (!$bcc) {
-            return $addresses;
-        }
-
-        /** @var AddressPart $part */
-        foreach ($bcc->getParts() as $part) {
-            $addresses->add(new MailAddress($part->getEmail(), $part->getName(), MailAddress::TYPE_BCC));
         }
 
         return $addresses;

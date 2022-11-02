@@ -5,7 +5,7 @@ namespace Armin\MboxParser;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @extends  ArrayCollection<int, MailAddress>
+ * @extends ArrayCollection<int, MailAddress>
  */
 class MailAddressCollection extends ArrayCollection
 {

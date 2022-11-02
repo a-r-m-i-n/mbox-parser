@@ -4,13 +4,13 @@ namespace Armin\MboxParser;
 
 final class Parser
 {
-    public function parse(string $filePath): Result
+    public function parse(string $filePath): Mailbox
     {
         if (!file_exists($filePath)) {
             throw new \InvalidArgumentException(sprintf('Unable to open mbox file "%s". File not found!', $filePath));
         }
 
-        $result = new Result($filePath);
+        $result = new Mailbox($filePath);
 
         $handle = fopen($filePath, 'r');
         if ($handle) {
@@ -48,7 +48,7 @@ final class Parser
                         }
 
                         $previousLines = array_slice($lines, 0, $sliceAt);
-                        $result->addMessage(new MailMessage($previousLines));
+                        $result->add(new MailMessage($previousLines));
                         $nextLines = array_slice($lines, $sliceAt + 1);
                         $boundary = $newBoundary;
                         $lines = $nextLines;
@@ -56,7 +56,7 @@ final class Parser
                     $isMessage = false;
                 }
             }
-            $result->addMessage(new MailMessage($lines));
+            $result->add(new MailMessage($lines));
             fclose($handle);
         }
 
