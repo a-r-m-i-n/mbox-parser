@@ -20,15 +20,22 @@ class MailAttachment
     private $contentMimeType;
 
     /**
-     * @param string $filename
-     * @param mixed  $content
-     * @param string $contentMimeType
+     * @var string|null
      */
-    public function __construct($filename, $content, $contentMimeType)
+    private $contentId;
+
+    /**
+     * @param string      $filename
+     * @param mixed       $content
+     * @param string      $contentMimeType
+     * @param string|null $contentId
+     */
+    public function __construct($filename, $content, $contentMimeType, $contentId)
     {
         $this->filename = $filename;
         $this->content = $content;
         $this->contentMimeType = $contentMimeType;
+        $this->contentId = $contentId;
     }
 
     public function getFilename(): string
@@ -55,5 +62,10 @@ class MailAttachment
     public function getContentMimeType(): string
     {
         return $this->contentMimeType;
+    }
+
+    public function getContentId(): ?string
+    {
+        return $this->contentId;
     }
 }

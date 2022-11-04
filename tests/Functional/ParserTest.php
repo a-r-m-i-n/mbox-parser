@@ -140,6 +140,26 @@ SVG
         self::assertSame('This is the <strong>HTML body</strong> of the mail', trim($thirdMail->getHtml()));
     }
 
+    public function testParserAttachmentContentId(): void
+    {
+        $parser = new Parser();
+        $subject = $parser->parse(__DIR__ . '/../Fixtures/test-mail-with-binary-attachment.mbox');
+
+        self::assertInstanceOf(Mailbox::class, $subject);
+        self::assertIsIterable($subject);
+        self::assertCount(1, $subject);
+
+        /** @var MailMessage $mail */
+        $mail = $subject->get(0);
+        self::assertInstanceOf(MailMessage::class, $mail);
+        self::assertCount(3, $mail->getAttachments());
+
+        // Only inline images get the contentId
+        self::assertSame('305aaac8efa0580e8399d26a6a5cf362@symfony', $mail->getAttachments()[0]->getContentId());
+        self::assertNull($mail->getAttachments()[1]->getContentId());
+        self::assertNull($mail->getAttachments()[2]->getContentId());
+    }
+
     public function testParserMailboxGetByMessageId(): void
     {
         $parser = new Parser();

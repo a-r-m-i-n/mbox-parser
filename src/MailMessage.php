@@ -156,7 +156,12 @@ class MailMessage
 
         $attachments = [];
         foreach ($attachmentParts as $attachmentPart) {
-            $attachments[] = new MailAttachment($attachmentPart->getFilename() ?? '', $attachmentPart->getContent(), $attachmentPart->getContentType());
+            $attachments[] = new MailAttachment(
+                $attachmentPart->getFilename() ?? '',
+                $attachmentPart->getContent(),
+                $attachmentPart->getContentType(),
+                $attachmentPart->getContentId()
+            );
         }
 
         return $attachments;
