@@ -1,7 +1,8 @@
 # armin/mbox-parser (mbox Parser for PHP)
 
-PHP library to parse mbox files to email messages. The mail messages are being parsed using
-the great library [zbateson/mail-mime-parser](https://github.com/zbateson/mail-mime-parser).
+PHP library to parse mbox files (RFC 4155) to email messages. 
+
+The mail messages (RFC 2822) are being parsed using the great library [zbateson/mail-mime-parser](https://github.com/zbateson/mail-mime-parser).
 
 **armin/mbox-parser** is released under [MIT license](https://github.com/a-r-m-i-n/editorconfig-cli/blob/master/LICENSE).
 
