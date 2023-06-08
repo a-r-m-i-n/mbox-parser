@@ -159,7 +159,7 @@ class MailMessage
             $attachments[] = new MailAttachment(
                 $attachmentPart->getFilename() ?? '',
                 $attachmentPart->getContent(),
-                $attachmentPart->getContentType(),
+                $attachmentPart->getContentType() ?: 'text/plain',
                 $attachmentPart->getContentId()
             );
         }
