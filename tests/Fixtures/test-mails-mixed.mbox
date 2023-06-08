@@ -1,0 +1,740 @@
+From no-reply@example.com Thu Jun 8 20:09:27 2023
+To: vieweg@iwkoeln.de
+From: TYPO3 CMS install tool <no-reply@example.com>
+Subject: Test TYPO3 CMS mail delivery from site "EXT:mbox Dev Environment"
+X-Mailer: TYPO3
+Message-ID: <37deaefedfff95876dac27b9690872ef@example.com>
+MIME-Version: 1.0
+Date: Thu, 08 Jun 2023 20:09:27 +0000
+Content-Type: multipart/alternative; boundary=BaFqLaVV
+
+--BaFqLaVV
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+TYPO3 Test Mail
+Hey TYPO3 Administrator
+
+Seems like your favorite TYP=
+O3 installation can send out emails!
+
+This email was sent by EXT:mbox D=
+ev Environment from URL: https://v12.mbox.ddev.site/
+
+Please contact yo=
+ur site administrator if you feel you received this email by accident.
+=
+
+TYPO3 CMS. Copyright =C2=A9 1998-2023 Kasper Sk=C3=A5rh=C3=B8j. Extensio=
+ns are copyright of their respective owners. Go to https://typo3.org/ for d=
+etails. TYPO3 CMS comes with ABSOLUTELY NO WARRANTY; details about licences=
+. This is free software, and you are welcome to redistribute it under certa=
+in conditions; details about licences. Obstructing the appearance of this n=
+otice is prohibited by law.
+--BaFqLaVV
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+
+<head>
+    <!--[if gte mso 15]>
+    <xml>
+      =
+  <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:P=
+ixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+ =
+   </xml>
+    <![endif]-->
+    <meta charset=3D"UTF-8">
+    <meta htt=
+p-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta name=3D"view=
+port" content=3D"width=3Ddevice-width, initial-scale=3D1">
+    <title></t=
+itle>
+    <style type=3D"text/css">
+        p {
+            margin:10=
+px 0;
+            padding:0;
+        }
+        table {
+            =
+border-collapse:collapse;
+        }
+        h1,
+        h2,
+       =
+ h3,
+        h4,
+        h5,
+        h6 {
+            display:block=
+;
+            margin:0;
+            padding:0;
+        }
+        im=
+g,
+        a img {
+            border:0;
+            height:auto;
+ =
+           outline:none;
+            text-decoration:none;
+        }
+=
+        body,
+        #bodyTable,
+        #bodyCell {
+            hei=
+ght:100%;
+            margin:0;
+            padding:0;
+            wi=
+dth:100%;
+        }
+        #outlook a {
+            padding:0;
+   =
+     }
+        img {
+            -ms-interpolation-mode:bicubic;
+    =
+    }
+        table {
+            mso-table-lspace:0pt;
+            m=
+so-table-rspace:0pt;
+        }
+        .ReadMsgBody {
+            wid=
+th:100%;
+        }
+        .ExternalClass {
+            width:100%;=
+
+        }
+        p,
+        a,
+        td {
+            mso-lin=
+e-height-rule:exactly;
+        }
+        a[href^=3Dtel],
+        a[hr=
+ef^=3Dsms] {
+            color:inherit;
+            cursor:default;
+ =
+           text-decoration:none;
+        }
+        p,
+        a,
+  =
+      td,
+        body,
+        table,
+        blockquote {
+       =
+     -ms-text-size-adjust:100%;
+            -webkit-text-size-adjust:100%=
+;
+        }
+        .ExternalClass,
+        .ExternalClass p,
+     =
+   .ExternalClass td,
+        .ExternalClass div,
+        .ExternalClas=
+s span,
+        .ExternalClass font {
+            line-height:100%;
+ =
+       }
+        a[x-apple-data-detectors]{
+            color:inherit !=
+important;
+            text-decoration:none !important;
+            fon=
+t-size:inherit !important;
+            font-family:inherit !important;
+=
+            font-weight:inherit !important;
+            line-height:inher=
+it !important;
+        }
+
+        .templateContainer {
+            =
+max-width:600px !important;
+        }
+        a.button {
+            =
+display:block;
+        }
+        .image,.retinaImage {
+            ve=
+rtical-align:bottom;
+        }
+        .textContent {
+            wor=
+d-break:break-word;
+        }
+        .textContent img {
+            =
+height:auto !important;
+        }
+        .dividerBlock {
+           =
+ table-layout:fixed !important;
+        }
+        h1 {
+            co=
+lor:#222222;
+            font-family:'Helvetica Neue', Helvetica, Arial, =
+Verdana, sans-serif;
+            font-size:40px;
+            font-style=
+:normal;
+            font-weight:bold;
+            line-height:150%;
+=
+            letter-spacing:normal;
+            text-align:center;
+     =
+   }
+        h2 {
+            color:#222222;
+            font-family:=
+'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+            font=
+-size:34px;
+            font-style:normal;
+            font-weight:bold=
+;
+            line-height:150%;
+            letter-spacing:normal;
+  =
+          text-align:left;
+        }
+        h3 {
+            color:#=
+444444;
+            font-family:'Helvetica Neue', Helvetica, Arial, Verda=
+na, sans-serif;
+            font-size:22px;
+            font-style:norm=
+al;
+            font-weight:bold;
+            line-height:150%;
+     =
+       letter-spacing:normal;
+            text-align:left;
+        }
+=
+        h4 {
+            color:#999999;
+            font-family:'Helvet=
+ica Neue', Helvetica, Arial, Verdana, sans-serif;
+            font-size:2=
+0px;
+            font-style:italic;
+            font-weight:normal;
+ =
+           line-height:125%;
+            letter-spacing:normal;
+       =
+     text-align:left;
+        }
+        #templateHeader {
+           =
+ background-image:none;
+            background-repeat:no-repeat;
+      =
+      background-position:center;
+            background-size:cover;
+  =
+          border-top:0;
+            border-bottom:0;
+            paddin=
+g-top:36px;
+            padding-bottom:0;
+        }
+        .headerCo=
+ntainer {
+            background-color:#ffffff;
+            background-=
+image:none;
+            background-repeat:no-repeat;
+            backgr=
+ound-position:center;
+            background-size:cover;
+            bo=
+rder-top:1px none ;
+            border-bottom:0;
+            padding-to=
+p:36px;
+            padding-bottom:36px;
+        }
+        .headerCon=
+tainer .textContent,
+        .headerContainer .textContent p {
+        =
+    color:#808080;
+            font-family:'Helvetica Neue', Helvetica, A=
+rial, Verdana, sans-serif;
+            font-size:16px;
+            line=
+-height:150%;
+            text-align:left;
+        }
+        .headerC=
+ontainer .textContent a,
+        .headerContainer .textContent p a {
+  =
+          color:#538bb3;
+            font-weight:normal;
+            te=
+xt-decoration:underline;
+        }
+        #templateBody {
+          =
+  background-color:#f2f2f2;
+            background-image:none;
+        =
+    background-repeat:no-repeat;
+            background-position:center;=
+
+            background-size:cover;
+            border-top:0;
+       =
+     border-bottom:0;
+            padding-top:0;
+            padding-bo=
+ttom:0;
+        }
+        .bodyContainer {
+            background-col=
+or:#ffffff;
+            background-image:none;
+            background-r=
+epeat:no-repeat;
+            background-position:center;
+            ba=
+ckground-size:cover;
+            border-top:0;
+            border-botto=
+m:0;
+            padding-top:0;
+            padding-bottom:18px;
+    =
+    }
+        .bodyContainer .textContent,
+        .bodyContainer .text=
+Content p {
+            color:#808080;
+            font-family:'Helveti=
+ca Neue', Helvetica, Arial, Verdana, sans-serif;
+            font-size:16=
+px;
+            line-height:150%;
+            text-align:left;
+      =
+  }
+        .bodyContainer .textContent a,
+        .bodyContainer .text=
+Content p a {
+            color:#538bb3;
+            font-weight:normal=
+;
+            text-decoration:underline;
+        }
+        .bodyConta=
+iner table.statistics th,
+        .bodyContainer table.statistics td {
+=
+            padding: 0 5px;
+        }
+        .bodyContainer table.stat=
+istics th:first-child,
+        .bodyContainer table.statistics td:first-c=
+hild {
+            padding-left: 0;
+        }
+        .bodyContainer =
+table.statistics th:last-child,
+        .bodyContainer table.statistics t=
+d:last-child {
+            padding-right: 0;
+        }
+        #templ=
+ateFooter{
+            background-color:#f2f2f2;
+            background=
+-image:none;
+            background-repeat:no-repeat;
+            backg=
+round-position:center;
+            background-size:cover;
+            b=
+order-top:1px none ;
+            border-bottom:0;
+            padding-t=
+op:0;
+            padding-bottom:36px;
+        }
+        .footerConta=
+iner{
+            background-color:#313131;
+            background-imag=
+e:none;
+            background-repeat:no-repeat;
+            background=
+-position:center;
+            background-size:cover;
+            border=
+-top:0;
+            border-bottom:0;
+            padding-top:45px;
+  =
+          padding-bottom:45px;
+        }
+        .footerContainer .text=
+Content,
+        .footerContainer .textContent p {
+            color:#F=
+FFFFF;
+            font-family:'Helvetica Neue', Helvetica, Arial, Verdan=
+a, sans-serif;
+            font-size:12px;
+            line-height:150%=
+;
+            text-align:center;
+        }
+        .footerContainer .=
+textContent a,
+        .footerContainer .textContent p a {
+            =
+color:#FFFFFF;
+            font-weight:normal;
+            text-decorat=
+ion:underline;
+        }
+        @media only screen and (min-width:768p=
+x){
+            .templateContainer {
+                width:600px !impor=
+tant;
+            }
+        }
+        @media only screen and (max-wid=
+th: 480px){
+            body,
+            table,
+            td,
+  =
+          p,
+            a {
+                -webkit-text-size-adjust:n=
+one !important;
+            }
+            body {
+                widt=
+h:100% !important;
+                min-width:100% !important;
+         =
+   }
+            h1 {
+                font-size:30px !important;
+    =
+            line-height:125% !important;
+            }
+            h2 {=
+
+                font-size:26px !important;
+                line-height=
+:125% !important;
+            }
+            h3 {
+                font=
+-size:20px !important;
+                line-height:150% !important;
+   =
+         }
+            h4 {
+                font-size:18px !important;=
+
+                line-height:150% !important;
+            }
+         =
+   .headerContainer .textContent,
+            .headerContainer .textConte=
+nt p {
+                font-size:16px !important;
+                line-=
+height:150% !important;
+            }
+            .bodyContainer .textC=
+ontent,
+            .bodyContainer .textContent p {
+                fon=
+t-size:16px !important;
+                line-height:150% !important;
+  =
+          }
+        }
+    </style>
+</head>
+<body>
+
+
+<center>=
+
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable"><tr><td align=3D"cen=
+ter" valign=3D"top" id=3D"bodyCell">
+        <table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%">
+
+           =20
+           =
+        =20
+               =20
+
+            <!-- HEADER START -->
+     =
+       <tr><td align=3D"center" valign=3D"top" id=3D"templateHeader" style=
+=3D"background-color: #ff8700">
+
+                <!--[if (gte mso 9)|(I=
+E)]><table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"600" style=3D"width:600px;"><tr><td align=3D"center" valign=3D"t=
+op" width=3D"600" style=3D"width:600px;"><![endif]-->
+                <ta=
+ble align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"templateContainer"><tr><td valign=3D"top" class=3D"heade=
+rContainer">
+                    <table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%" class=3D"textBlock" style=3D"min-width:100%;=
+"><tbody class=3D"textBlockOuter"><tr><td valign=3D"top" class=3D"textBlock=
+Inner" style=3D"padding-top:9px;">
+
+                        <!--[if mso=
+]><table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"100%" style=3D"width:100%;"><tr><td valign=3D"top" width=3D"600" sty=
+le=3D"width:600px;"><![endif]-->
+                        <table align=3D"=
+left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width:1=
+00%; min-width:100%;" width=3D"100%" class=3D"textContentContainer">
+    =
+                        <tbody>
+                            <tr>
+      =
+                          <td valign=3D"top" class=3D"image" align=3D"cente=
+r" style=3D"padding: 0px 36px; padding-bottom: 20px; color: #222222;text-al=
+ign: center;">
+                                   =20
+                   =
+                         <img src=3D"https://v12.mbox.ddev.site//_assets/1e=
+e1d3e909b58d32e30dcea666dd3224/Images/typo3_orange.svg" alt=3D"TYPO3 Logo" =
+height=3D"41" width=3D"150" />
+                                        =
+
+                                </td>
+                            </tr=
+>
+                            <tr>
+                                <td =
+valign=3D"top" class=3D"textContent" style=3D"padding: 0px 36px;color: #222=
+222;font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, san=
+s-serif;font-size: 24px;text-align: center;">
+                           =
+         <strong>TYPO3 Test Mail</strong>
+                               =
+ </td>
+                            </tr>
+                            </=
+tbody>
+                        </table>
+                        <!--[if=
+ mso]></td></tr></table><![endif]-->
+
+                    </td></tr></t=
+body></table>
+                </td></tr></table>
+                <!--[i=
+f (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+            </td></=
+tr>
+            <!-- HEADER END -->
+
+
+            <!-- BODY START -=
+->
+            <tr><td align=3D"center" valign=3D"top" id=3D"templateBody=
+">
+
+                <!--[if (gte mso 9)|(IE)]><table align=3D"center" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"widt=
+h:600px;"><tr><td align=3D"center" valign=3D"top" width=3D"600" style=3D"wi=
+dth:600px;"><![endif]-->
+                <table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"template=
+Container"><tr><td valign=3D"top" class=3D"bodyContainer">
+              =
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" class=3D"textBlock" style=3D"min-width:100%;"><tbody class=3D"textBlockOu=
+ter"><tr><td valign=3D"top" class=3D"textBlockInner" style=3D"padding: 36px=
+ 0px;">
+
+                        <!--[if mso]><table align=3D"left" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width=
+:100%;"><tr><td valign=3D"top" width=3D"600" style=3D"width:600px;"><![endi=
+f]-->
+                        <table align=3D"left" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=
+=3D"100%" class=3D"textContentContainer">
+                            <tb=
+ody>
+                            <tr>
+                                <=
+td valign=3D"top" class=3D"textContent" style=3D"padding: 0px 36px;">
+
+=
+                                   =20
+   =20
+        <h4>Hey TYPO3 Adminis=
+trator</h4>
+   =20
+    <p>Seems like your favorite TYPO3 installation can=
+ send out emails!</p>
+
+
+                                </td>
+     =
+                       </tr>
+                            </tbody>
+     =
+                   </table>
+                        <!--[if mso]></td></t=
+r></table><![endif]-->
+
+                    </td></tr></tbody></table>=
+
+                </td></tr></table>
+                <!--[if (gte mso 9)=
+|(IE)]></td></tr></table><![endif]-->
+
+            </td></tr>
+       =
+     <!-- BODY END -->
+
+            <!-- FOOTER START -->
+           =
+ <tr><td align=3D"center" valign=3D"top" id=3D"templateFooter">
+
+      =
+          <!--[if (gte mso 9)|(IE)]><table align=3D"center" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;"><tr>=
+<td align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;"><!=
+[endif]-->
+                <table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContainer"><tr><=
+td valign=3D"top" class=3D"footerContainer">
+                    <table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"tex=
+tBlock" style=3D"min-width:100%;"><tbody class=3D"textBlockOuter"><tr><td v=
+align=3D"top" class=3D"textBlockInner">
+
+                        <!--[i=
+f mso]><table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"100%" style=3D"width:100%;"><tr><td valign=3D"top" width=3D"600=
+" style=3D"width:600px;"><![endif]-->
+                        <table alig=
+n=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-wi=
+dth:100%; min-width:100%;" width=3D"100%" class=3D"textContentContainer"><t=
+body><tr><td valign=3D"top" class=3D"textContent" style=3D"padding:0 36px;"=
+>
+
+                            <p style=3D"margin-top: 0;">
+         =
+                       This email was sent by <strong>EXT:mbox Dev Environm=
+ent</strong> from URL: <a href=3D"https://v12.mbox.ddev.site/" target=3D"_b=
+lank" rel=3D"noopener">https://v12.mbox.ddev.site/</a> - Please contact you=
+r site administrator if you feel you received this email by accident.
+   =
+                         </p>
+                            <p style=3D"mar=
+gin-top: 0;">
+                                <a href=3D"https://typo3.or=
+g/" target=3D"_blank" rel=3D"noreferrer">TYPO3 CMS</a>. Copyright &copy; 19=
+98-2023 Kasper Sk&aring;rh&oslash;j. Extensions are copyright of their resp=
+ective owners. Go to <a href=3D"https://typo3.org/" target=3D"_blank" rel=
+=3D"noreferrer">https://typo3.org/</a> for details. TYPO3 CMS comes with AB=
+SOLUTELY NO WARRANTY; <a href=3D"https://typo3.org/project/licenses/" targe=
+t=3D"_blank" rel=3D"noreferrer">details about licences.</a> This is free so=
+ftware, and you are welcome to redistribute it under certain conditions; <a=
+ href=3D"https://typo3.org/project/licenses/" target=3D"_blank" rel=3D"nore=
+ferrer">details about licences.</a> Obstructing the appearance of this noti=
+ce is prohibited by law.
+                            </p>
+
+          =
+              </td></tr></tbody></table>
+                        <!--[if =
+mso]></td></tr></table><![endif]-->
+
+                    </td></tr></tb=
+ody></table>
+                </td></tr></table>
+                <!--[if=
+ (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+
+            </td>=
+</tr>
+            <!-- FOOTER END -->
+
+        </table>
+    </td></=
+tr></table>
+</center>
+
+</body>
+
+
+--BaFqLaVV--
+
+
+From test@tst.de Thu Jun 8 20:09:31 2023
+Subject: HTML Test
+To: deine-mudda@v.ieweg.de
+From: test@tst.de
+X-Mailer: TYPO3
+Message-ID: <ae2b04bf9d778d9ecf188b9b99a3b119@tst.de>
+MIME-Version: 1.0
+Date: Thu, 08 Jun 2023 20:09:31 +0000
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Dies ist ein Beispiel <em>HTML</em> Text
+
+From test@tst.de Thu Jun 8 20:09:39 2023
+Subject: Plaintext Test
+To: deine-mudda@v.ieweg.de
+From: test@tst.de
+X-Mailer: TYPO3
+Message-ID: <9a0f39053abd87c1ac80d3d17b163df3@tst.de>
+MIME-Version: 1.0
+Date: Thu, 08 Jun 2023 20:09:39 +0000
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Dies ist ein Beispiel Text
+

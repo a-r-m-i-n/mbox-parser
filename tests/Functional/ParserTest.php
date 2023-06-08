@@ -160,6 +160,37 @@ SVG
         self::assertNull($mail->getAttachments()[2]->getContentId());
     }
 
+    public function testParserEnsureRfc4155(): void
+    {
+        $parser = new Parser();
+        $subject = $parser->parse(__DIR__ . '/../Fixtures/test-mails-mixed.mbox');
+
+        self::assertInstanceOf(Mailbox::class, $subject);
+        self::assertIsIterable($subject);
+        self::assertCount(3, $subject);
+
+        /** @var MailMessage $mail */
+        $mail = $subject->get(0);
+        self::assertInstanceOf(MailMessage::class, $mail);
+        self::assertSame('Test TYPO3 CMS mail delivery from site "EXT:mbox Dev Environment"', $mail->getSubject());
+        self::assertNotEmpty($mail->getHtml());
+        self::assertNotEmpty($mail->getText());
+
+        /** @var MailMessage $mail */
+        $mail = $subject->get(1);
+        self::assertInstanceOf(MailMessage::class, $mail);
+        self::assertSame('HTML Test', $mail->getSubject());
+        self::assertNotEmpty($mail->getHtml());
+        self::assertEmpty($mail->getText());
+
+        /** @var MailMessage $mail */
+        $mail = $subject->get(2);
+        self::assertInstanceOf(MailMessage::class, $mail);
+        self::assertSame('Plaintext Test', $mail->getSubject());
+        self::assertEmpty($mail->getHtml());
+        self::assertNotEmpty($mail->getText());
+    }
+
     public function testParserMailboxGetByMessageId(): void
     {
         $parser = new Parser();
