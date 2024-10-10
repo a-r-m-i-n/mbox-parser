@@ -48,13 +48,6 @@ final class Mailbox extends ArrayCollection
         return $this->md5Hash;
     }
 
-    public function getMessageById(string $messageId): ?MailMessage
-    {
-        return $this->filter(function (MailMessage $message) use ($messageId) {
-            return $message->getMessageId() === $messageId;
-        })->first() ?: null;
-    }
-
     protected function createFrom(array $elements)
     {
         return new static($this->filePath, $elements);

@@ -1,4 +1,5 @@
 <?php
+namespace Armin\MboxParser\Tests\Functional;
 
 use Armin\MboxParser\MailAddress;
 use Armin\MboxParser\MailMessage;
@@ -11,7 +12,7 @@ class ParserTest extends TestCase
     public function testParserWithInvalidFilePath(): void
     {
         $parser = new Parser();
-        $this->expectException(InvalidArgumentException::class);
+        $this->expectException(\InvalidArgumentException::class);
         $invalidFilePath = __DIR__ . '/non-existing-file.mbox';
         $this->expectExceptionMessage(sprintf('Unable to open mbox file "%s". File not found!', $invalidFilePath));
         $parser->parse($invalidFilePath);
@@ -27,8 +28,8 @@ class ParserTest extends TestCase
         self::assertCount(0, $subject);
 
         self::assertSame($filePath, $subject->getFilePath());
-        self::assertInstanceOf(DateTime::class, $subject->getDate());
-        self::assertEquals((new DateTime())->setTime(0, 0), $subject->getDate()->setTime(0, 0));
+        self::assertInstanceOf(\DateTime::class, $subject->getDate());
+        self::assertEquals((new \DateTime())->setTime(0, 0), $subject->getDate()->setTime(0, 0));
         self::assertSame(md5_file($filePath), $subject->getMd5Hash());
     }
 
@@ -41,10 +42,12 @@ class ParserTest extends TestCase
         self::assertInstanceOf(Mailbox::class, $subject);
         self::assertIsIterable($subject);
         self::assertCount(3, $subject);
+        self::assertSame(3, $parser->getTotalEntries($filePath));
+
 
         self::assertSame($filePath, $subject->getFilePath());
-        self::assertInstanceOf(DateTime::class, $subject->getDate());
-        self::assertEquals((new DateTime())->setTime(0, 0), $subject->getDate()->setTime(0, 0));
+        self::assertInstanceOf(\DateTime::class, $subject->getDate());
+        self::assertEquals((new \DateTime())->setTime(0, 0), $subject->getDate()->setTime(0, 0));
         self::assertSame(md5_file($filePath), $subject->getMd5Hash());
 
         $values = [
@@ -67,6 +70,17 @@ class ParserTest extends TestCase
             self::assertStringContainsString('<h4>Hey TYPO3 Administrator</h4>', $message->getHtml());
             self::assertStringContainsString('<p>Seems like your favorite TYPO3 installation can send out emails!</p>', $message->getHtml());
         }
+    }
+
+    public function testParserWithPagination(): void
+    {
+        $parser = new Parser();
+        $subject = $parser->parse($filePath = __DIR__ . '/../Fixtures/typo3-test-mail-setup.mbox', 1, 2);
+
+        self::assertInstanceOf(Mailbox::class, $subject);
+        self::assertIsIterable($subject);
+        self::assertCount(2, $subject);
+        self::assertSame(3, $parser->getTotalEntries($filePath));
     }
 
     public function testParserWithSymfonyMails(): void
@@ -191,28 +205,28 @@ SVG
         self::assertNotEmpty($mail->getText());
     }
 
-    public function testParserMailboxGetByMessageId(): void
+    public function testParserGetByMessageId(): void
     {
         $parser = new Parser();
-        $subject = $parser->parse(__DIR__ . '/../Fixtures/typo3-test-mail-setup.mbox');
+        $filePath = __DIR__ . '/../Fixtures/typo3-test-mail-setup.mbox';
 
         /** @var MailMessage $mail1 */
-        $mail1 = $subject->getMessageById($id = '2026f546d879a98e610829b5dd9d43ba@example.com');
+        $mail1 = $parser->getMessageById($filePath, $id = '2026f546d879a98e610829b5dd9d43ba@example.com');
         self::assertInstanceOf(MailMessage::class, $mail1);
         self::assertSame('armin@v.ieweg.de', $mail1->getTo()->get(0)->getEmail());
         self::assertSame($id, $mail1->getMessageId());
 
         /** @var MailMessage $mail2 */
-        $mail2 = $subject->getMessageById($id = '2ed7f25ce1d10ac82d05b9c60a4a3235@example.com');
+        $mail2 = $parser->getMessageById($filePath, $id = '2ed7f25ce1d10ac82d05b9c60a4a3235@example.com');
         self::assertInstanceOf(MailMessage::class, $mail2);
         self::assertSame('info@v.ieweg.de', $mail2->getTo()->get(0)->getEmail());
         self::assertSame($id, $mail2->getMessageId());
 
-        $invalidMail = $subject->getMessageById('abc123@example.com');
+        $invalidMail = $parser->getMessageById($filePath, $id = 'abc123@example.com');
         self::assertSame(null, $invalidMail);
 
         /** @var MailMessage $mail3 */
-        $mail3 = $subject->getMessageById($id = '9be46546a050ee93011515b8e92a5901@example.com');
+        $mail3 = $parser->getMessageById($filePath, $id = '9be46546a050ee93011515b8e92a5901@example.com');
         self::assertInstanceOf(MailMessage::class, $mail3);
         self::assertSame('vieweg@iwkoeln.de', $mail3->getTo()->get(0)->getEmail());
         self::assertSame($id, $mail3->getMessageId());
