@@ -54,3 +54,17 @@ $mailMessage = $parser->getMessageById('path/to/file.mbox', '2026f546d879a98e610
 ### Working with mail message
 
 See [tests](tests/Functional/ParserTest.php) for more examples of how to work with MailMessage.
+
+
+## Changelog
+
+### 2.0
+
+In version 2.0 of **armin/mbox-parser** the syntax of parsing mbox files has changed,
+in order to support pagination for large mbox files. See [usage section](#usage) for details.
+
+**Following changes have been applied:**
+
+* Removed `getMessageById` method in `Mailbox` class
+* Added `getMessageById` method to `Parser` class
+* Added `getTotalEntries` method to `Parser` class
