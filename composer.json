@@ -52,8 +52,8 @@
             "@test-php-coverage"
         ],
         "php-stan": "phpstan analyse -c .build/phpstan.neon",
-        "php-cs": "php-cs-fixer fix --config .build/php-cs-rules.php --verbose --diff --dry-run",
-        "php-fix": "php-cs-fixer fix --config .build/php-cs-rules.php",
+        "php-cs": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --config .build/php-cs-rules.php --verbose --diff --dry-run",
+        "php-fix": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --config .build/php-cs-rules.php",
         "test-php": "phpunit -c .build/phpunit.xml --no-coverage",
         "test-php-coverage": "export XDEBUG_MODE=coverage && phpunit -c .build/phpunit.xml --coverage-text"
     }
