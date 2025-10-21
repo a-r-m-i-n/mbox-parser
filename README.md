@@ -58,6 +58,10 @@ See [tests](tests/Functional/ParserTest.php) for more examples of how to work wi
 
 ## Changelog
 
+### 2.0.1
+
+- Fix PHP 8 deprecation
+
 ### 2.0
 
 In version 2.0 of **armin/mbox-parser** the syntax of parsing mbox files has changed,
