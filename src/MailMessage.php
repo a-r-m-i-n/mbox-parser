@@ -28,7 +28,7 @@ class MailMessage
      */
     private $initialized = false;
 
-    public function __construct(array $messageLines, MailMimeParser $messageParser = null)
+    public function __construct(array $messageLines, ?MailMimeParser $messageParser = null)
     {
         $this->messageLines = $messageLines;
         $this->messageParser = $messageParser ?? new MailMimeParser();
