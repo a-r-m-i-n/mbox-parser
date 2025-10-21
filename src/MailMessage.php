@@ -14,7 +14,7 @@ class MailMessage
      */
     private $message;
     /**
-     * @var array
+     * @var string[]
      */
     private $messageLines;
 
@@ -28,6 +28,9 @@ class MailMessage
      */
     private $initialized = false;
 
+    /**
+     * @param string[] $messageLines
+     */
     public function __construct(array $messageLines, ?MailMimeParser $messageParser = null)
     {
         $this->messageLines = $messageLines;
