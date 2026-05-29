@@ -73,7 +73,7 @@ class MailMessage
         }
 
         /** @var AddressPart $part */
-        foreach ($to->getParts() as $part) {
+        foreach ($to->getAddresses() as $part) {
             $addresses->add(new MailAddress($part->getEmail(), $part->getName()));
         }
 
@@ -90,7 +90,7 @@ class MailMessage
         }
 
         /** @var AddressPart $part */
-        foreach ($cc->getParts() as $part) {
+        foreach ($cc->getAddresses() as $part) {
             $addresses->add(new MailAddress($part->getEmail(), $part->getName(), MailAddress::TYPE_CC));
         }
 
@@ -123,7 +123,7 @@ class MailMessage
         }
 
         /** @var AddressPart $part */
-        foreach ($replyTo->getParts() as $part) {
+        foreach ($replyTo->getAddresses() as $part) {
             $addresses->add(new MailAddress($part->getEmail(), $part->getName()));
         }
 
