@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": ">=7.3",
-        "zbateson/mail-mime-parser": "^2.2",
+        "zbateson/mail-mime-parser": "^2 || ^3 || ^4",
         "doctrine/collections": "^1.7 | ^2.1"
     },
     "require-dev": {
